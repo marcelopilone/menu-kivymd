@@ -1,3 +1,6 @@
+<screen1>:
+    id: elscreen
+
 NavigationLayout:
     MDNavigationDrawer:
         NavigationDrawerIconButton:
@@ -18,12 +21,50 @@ NavigationLayout:
             id: screen_manager
             Screen:
                 name: "screen1"
-                MDLabel:
-                    text: "Screen 1 asdasd"
+                BoxLayout:
+                    size_hint: .8,.8
+                    pos_hint: {"center_x":.5,"center_y":.5}
+                    spacing: dp(100)
+                    orientation: 'vertical'
+                    MDLabel:
+                        text: "Aca subis todos los datos re piola"
+                    MDTextField: 
+                        name: "email_uno"
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        #helper_text_mode: "on_focus"
+                        required: True
+                    MDTextField: 
+                        name: "email_dos"
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        helper_text_mode: "on_focus"
+                        foreground_color: 1,0,1,1
+                        max_text_lenght: 12
+                    Button:
+                        text: "JIJIJI"
+                        on_release: screen1Local()
+
             Screen:
                 name: "screen2"
-                MDLabel:
-                    text: "Screen 2"
+                Label:
+                    text: "Razon social: "
 
-
-
+                BoxLayout:
+                    size_hint: .8,.8
+                    pos_hint: {"center_x":.5,"center_y":.5}
+                    spacing: dp(100)
+                    orientation: 'vertical'
+                    MDTextField: 
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        helper_text_mode: "on_focus"
+                BoxLayout:
+                    size_hint: .8,.8
+                    pos_hint: {"center_x":.5,"center_y":.10}
+                    spacing: dp(100)
+                    orientation: 'vertical'
+                    MDTextField: 
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        helper_text_mode: "on_focus"                 

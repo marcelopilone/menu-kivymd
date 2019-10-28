@@ -7,11 +7,12 @@ from kivy.uix.label import Label
 class MainApp(App):
     theme_cls = ThemeManager()
 
-    def screen1():
-    	print('jaja')
+    def screen1Local(self):
+    	print('asdas')
 
 class screen1():
-	print("jaja 1")
+    def build(self):
+	       print("jaja 1")
 	#l = Label(text="DADADA")
 	#self.add_widget(l)
 
