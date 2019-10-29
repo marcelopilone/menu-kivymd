@@ -17,33 +17,78 @@ NavigationLayout:
             title: "Your app"
             md_bg_color: app.theme_cls.primary_color
             left_action_items: [['menu', lambda x: root.toggle_nav_drawer()]]
+        MDLabel:
+            text: "Aca subis todos los datos re piola"
         ScreenManager:
             id: screen_manager
             Screen:
-                name: "screen1"
-                BoxLayout:
-                    size_hint: .8,.8
+                name: "screen1"                
+                GridLayout:
+                    size_hint: .8,.8 #ancho de input
                     pos_hint: {"center_x":.5,"center_y":.5}
-                    spacing: dp(100)
+                    spacing: dp(10) #espacio entre labels
                     orientation: 'vertical'
-                    MDLabel:
-                        text: "Aca subis todos los datos re piola"
+                    cols: 4
+                    
                     MDTextField: 
-                        name: "email_uno"
+                        id: "email_uno"
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        multiline:False
+                        #helper_text_mode: "on_focus"
+                        required: True
+                    MDTextField: 
+                        id: "email_dos"
                         hint_text: "Email"
                         helper_text: "Ingresa tu email papa"
                         #helper_text_mode: "on_focus"
                         required: True
                     MDTextField: 
-                        name: "email_dos"
+                        name: "email_tres"
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        #helper_text_mode: "on_focus"
+                        required: True
+                    MDTextField: 
+                        name: "email_cuatro"
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        #helper_text_mode: "on_focus"
+                        required: True
+                    MDTextField: 
+                        name: "email_cinco"
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        #helper_text_mode: "on_focus"
+                        required: True
+                    MDTextField: 
+                        name: "email_seis"
                         hint_text: "Email"
                         helper_text: "Ingresa tu email papa"
                         helper_text_mode: "on_focus"
                         foreground_color: 1,0,1,1
                         max_text_lenght: 12
-                    Button:
-                        text: "JIJIJI"
-                        on_release: screen1Local()
+                    MDTextField: 
+                        name: "email_siete"
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        helper_text_mode: "on_focus"
+                        foreground_color: 1,0,1,1
+                        max_text_lenght: 12
+                    MDTextField: 
+                        name: "email_ocho"
+                        hint_text: "Email"
+                        helper_text: "Ingresa tu email papa"
+                        helper_text_mode: "on_focus"
+                        foreground_color: 1,0,1,1
+                        max_text_lenght: 12                    
+                    BoxLayout:
+                        Button:
+                            text: "JAJAJA"
+                            on_press: app.screen1Local()
+                        Button:
+                            text: "JIJIJI"
+                            on_press: app.screen1Local()
 
             Screen:
                 name: "screen2"
