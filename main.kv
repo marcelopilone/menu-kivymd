@@ -1,7 +1,8 @@
 <screen1>:
-    id: elscreen
+    id: elscreen   
 
 NavigationLayout:
+    id: todoDeTodo
     MDNavigationDrawer:
         NavigationDrawerIconButton:
             text: "Screen 1"
@@ -20,7 +21,7 @@ NavigationLayout:
         MDLabel:
             text: "Aca subis todos los datos re piola"
         ScreenManager:
-            id: screen_manager
+            id: screen_manager            
             Screen:
                 name: "screen1"                
                 GridLayout:
@@ -29,9 +30,9 @@ NavigationLayout:
                     spacing: dp(10) #espacio entre labels
                     orientation: 'vertical'
                     cols: 4
-                    
-                    MDTextField: 
+                    TextInput: 
                         id: "email_uno"
+                        name: "email_uno"
                         hint_text: "Email"
                         helper_text: "Ingresa tu email papa"
                         multiline:False
