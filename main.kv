@@ -3,6 +3,7 @@
 
 NavigationLayout:
     id: todoDeTodo
+    container: 'container'
     MDNavigationDrawer:
         NavigationDrawerIconButton:
             text: "Screen 1"
@@ -21,21 +22,19 @@ NavigationLayout:
         MDLabel:
             text: "Aca subis todos los datos re piola"
         ScreenManager:
-            id: screen_manager            
+            id: screen_manager 
             Screen:
-                name: "screen1"                
+                name: "screen1"
                 GridLayout:
                     size_hint: .8,.8 #ancho de input
                     pos_hint: {"center_x":.5,"center_y":.5}
                     spacing: dp(10) #espacio entre labels
                     orientation: 'vertical'
                     cols: 4
-                    TextInput: 
-                        id: "email_uno"
-                        name: "email_uno"
+                    TextInput:
+                        id: txt_input_email_uno
                         hint_text: "Email"
                         helper_text: "Ingresa tu email papa"
-                        multiline:False
                         #helper_text_mode: "on_focus"
                         required: True
                     MDTextField: 
@@ -82,14 +81,15 @@ NavigationLayout:
                         helper_text: "Ingresa tu email papa"
                         helper_text_mode: "on_focus"
                         foreground_color: 1,0,1,1
-                        max_text_lenght: 12                    
+                        max_text_lenght: 12  
                     BoxLayout:
                         Button:
                             text: "JAJAJA"
-                            on_press: app.screen1Local()
+                            on_press: app.screen1Local(txt_input_email_uno.text)
                         Button:
+                            id: 'botonaso'
                             text: "JIJIJI"
-                            on_press: app.screen1Local()
+                            on_press: app.screen1Local(txt_input_email_uno.text)
 
             Screen:
                 name: "screen2"
